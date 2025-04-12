@@ -1,9 +1,13 @@
+``` sql
 select * from sales_data
+```
+```` sql	
 select
-	count(*)
+count(*)
 from sales_data
+```
 
-
+``` sql
 delete from sales_data
 where 
 	transaction_id is NULL
@@ -27,16 +31,17 @@ where
 	cogs is NULL
 	OR
 	total_sale is NULL;
-
-
+```
+1. **write a sql query to fetch where the sale-date is '2022-11' and customer_id**
+``` sql
 	select * from sales_data
 	where
 		TO_CHAR(sale_date, 'YYYY-MM') = '2022-11'
 		AND
 		customer_id = 117
-
-1. Write a SQL query to create each shift and number of orders (Example Morning <12, Afternoon Between 12 & 17, Evening >17)
-
+```
+2 **Write a SQL query to create each shift and number of orders (Example Morning <12, Afternoon Between 12 & 17, Evening >17)**
+``` sql
 WITH hourly_sale
 AS
 (
@@ -53,6 +58,7 @@ SELECT
     COUNT(*) as total_orders    
 FROM hourly_sale
 GROUP BY shift
+```
 
 		
 
