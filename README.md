@@ -7,7 +7,7 @@ select
 count(*)
 from sales_data
 ```
-
+0. **Cleaning the data**
 ``` sql
 delete from sales_data
 where 
